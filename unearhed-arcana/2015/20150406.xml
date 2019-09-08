@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Unearthed Arcana: Modifying Classes</name>
+		<description>Sometimes a campaign will have special needs for archetypes or character options not found in the existing official material. If you’re in this situation, you might want to modify one or more of the classes in the game in order to provide options for players looking for a unique twist on their characters’ abilities. However, modifying a class is not something that should be undertaken lightly, and the job requires some serious effort, playtesting, and revision to get it right. The two best ways to modify a class are to swap out some class features for different ones, and to add new to an existing class. This article presents methods that will help you to use existing mechanics as a model, while drawing upon features of other classes for inspiration.</description>
+		<author url="https://dnd.wizards.com/articles/unearthed-arcana/modifying-classes">Wizards of the Coast</author>
+		<update version="0.0.1">
+			<file name="20150406.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/unearthed-arcana/2015/20150406.xml" />
+		</update>
+	</info>
+	
+	<element name="Unearthed Arcana: Modifying Classes" type="Source" source="Core" id="ID_WOTC_SOURCE_UNEARTHED_ARCANA_20150406">
+		<description>
+			<p>Sometimes a campaign will have special needs for archetypes or character options not found in the existing official material. If you’re in this situation, you might want to modify one or more of the classes in the game in order to provide options for players looking for a unique twist on their characters’ abilities. However, modifying a class is not something that should be undertaken lightly, and the job requires some serious effort, playtesting, and revision to get it right. The two best ways to modify a class are to swap out some class features for different ones, and to add new to an existing class. This article presents methods that will help you to use existing mechanics as a model, while drawing upon features of other classes for inspiration.</p>
+		</description>
+		<setters>
+			<set name="abbreviation">UA20150406</set>
+			<set name="url">https://dnd.wizards.com/articles/unearthed-arcana/modifying-classes</set>
+			<set name="author" abbreviation="WOTC" url="http://dnd.wizards.com">Wizards of the Coast</set>
+			<set name="official">true</set>
+			<set name="playtest">true</set>
+			<set name="release">20150406</set>
+		</setters>
+	</element>
+
+	<!-- Rule Element-->
+	<element name="Rangers With No Spells" type="Rule" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_RULE_RANGERS_WITH_NO_SPELLS">
+		<description>
+			<p>As an example of what the class feature replacement process might be like, we will remove spellcasting from the ranger class. Let’s say that in your campaign you want rangers to be a little bit more like Strider from the <i>Lord of the Rings</i>, and less overtly magical from the outset.</p>
+			<p class="indent">The Spellcasting class feature has a big impact on the ranger class, so this is no small project. Start by evaluating what the Spellcasting feature is contributing to the class. In general, rangers have a more limited spell list (and know only a relatively small number of spells), and operate on the same half-speed progression for spellcasting as the paladin does. Looking over the ranger’s spells, you might come to the following conclusions about what the Spellcasting feature contributes to the class:</p>
+			<ul>
+				<li>Rangers have a lot of exploration utility in their spells, with access to magic such as <i>detect poison and disease, beast sense,</i> and <i>conjure animals.</i></li>
+				<li>Rangers gain a lot of their combat potency from spells, especially <i>hunter’s mark.</i></li>
+				<li>Rangers get some healing and restoration ability from spells such as <i>cure wounds, lesser restoration,</i> and <i>protection from poison</i>, which stave off the harm an adventurer might suffer while exploring in the wilderness.</li>
+				<li>Rangers get some combat control effects from their spells such as <i>ensnaring strike, spike growth,</i> and <i>conjure barrage</i>, all of which give the ranger a magical edge in combat.</li>
+				<li>At some levels at which the ranger gains access to new spell levels, this is the only class feature the character receives. As a result, the ranger will need additional class features at those levels to prevent them from providing nothing to the ranger aside from increased hit points.</li>
+			</ul>
+			<p>Given the usefulness of the <i>cure wounds</i> spell, and the greater need for healing at lower levels, let’s create a healing class feature that allows the ranger to create and apply herbal poultices — an improvement that is on par with drinking a potion at first, but one that will scale up as the ranger gains levels.</p>
+			<p class="indent">Additionally, since the ranger is likely to need some extra combat utility that spells would normally provide, let’s add a version of the Combat Superiority class feature drawn from the Battle Master fighter. The maneuvers that Combat Superiority grants can provide a nice boost in combat, especially in matters of battlefield control. Looking at the fighter class, we can see that the Battle Master fighter’s Combat Superiority is sitting in a similar space as the spellcasting progression of the Eldritch Knight. We don’t want the ranger to outshine the Battle Master fighter, so we’re going to start the ranger with fewer maneuvers, scaling up as the ranger gains levels. Since we’re going to be replacing a one-half spellcasting progression, this means that we’ll need a few other features to bring this ranger up to par.</p>
+			<p class="indent">At 9th and 13th levels are gaps where we can place some exploration-focused mechanics. Let’s model the first one on the <i>protection from poison</i> spell, and also give the poultice-creating class feature an improved effect. The second one we can model on the <i>conjure animals</i> spell, which can be useful both in exploration scenes and in combat scenes.</p>
+			<p class="indent">At 17th level is another gap, which we can fix with an improvement on Combat Superiority. Fortunately, the Battle Master has a class feature that would fit in well in the concept of this ranger, so we can swap in the Relentless feature to make sure the ranger always has at least some ability to exercise control over the battlefield, even in the later part of an adventuring day.</p>
+			<p class="indent">Finally, we need to consider the impact of these changes on other class features, and make adjustments as necessary. For example, the Beast Master archetype for the ranger has a Share Spells class feature at 15th level that will no longer work without a Spellcasting feature. If your non-spellcasting ranger decides to play a Beast Master, you will need to create a substitute class feature for Share Spells as well, perhaps something to help keep the ranger’s beast companion alive longer. Additionally, since Primeval Awareness requires the ranger to expend spell slots to activate the class feature, we can modify that feature to allow the ranger to use it once and regain its use after finishing a short or long rest.</p>
+		</description>
+		<setters>
+			<set name="keywords">Ranger, spell-less</set>
+		</setters>
+	</element>
+
+	<!-- Spell-less Ranger -->
+	<element name="Spell-less Ranger" type="Class" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASS_SPELL_LESS_RANGER">
+		<description>
+			<div element="ID_WOTC_UA20150406_RULE_RANGERS_WITH_NO_SPELLS" />
+			<p class="flavor">A warrior who uses martial prowess and knowledge of nature to combat threats on the edges of civilization.</p>
+			<p>Rough and wild looking, a human stalks alone through the shadows of trees, hunting the orcs he knows are planning a raid on a nearby farm. Clutching a shortsword in each hand, he becomes a whirlwind of steel, cutting down one enemy after another.</p>
+			<p class="indent">After tumbling away from a cone of freezing air, an elf finds her feet and draws back her bow to loose an arrow at the white dragon. Shrugging off the wave of fear that emanates from the dragon like the cold of its breath, she sends one arrow after another to find the gaps between the dragon’s thick scales.</p>
+			<p class="indent">Holding his hand high, a half-elf whistles to the hawk that circles high above him, calling the bird back to his side. Whispering instructions in Elvish, he points to the owlbear he’s been tracking and sends the hawk to distract the creature while he readies his bow.</p>
+			<p class="indent">Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch.</p>
+			<h4>DEADLY HUNTERS</h4>
+			<p>Warriors of the wilderness, rangers specialize in hunting the monsters that threaten the edges of civilization—humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly dragons. They learn to track their quarry as a predator does, moving stealthily through the wilds and hiding themselves in brush and rubble. Rangers focus their combat training on techniques that are particularly useful against their specific favored foes.</p>
+			<h4>INDEPENDENT ADVENTURERS</h4>
+			<p>Though a ranger might make a living as a hunter, a guide, or a tracker, a ranger’s true calling is to defend the outskirts of civilization from the ravages of monsters and humanoid hordes that press in from the wild. In some places, rangers gather in secretive orders or join forces with druidic circles. Many rangers, though, are independent almost to a fault, knowing that, when a dragon or a band of orcs attacks, a ranger might be the first—and possibly the last—line of defense.</p>
+			<p class="indent">This fierce independence makes rangers well suited to adventuring, since they are accustomed to life far from the comforts of a dry bed and a hot bath. Faced with city-bred adventurers who grouse and whine about the hardships of the wild, rangers respond with some mixture of amusement, frustration, and compassion. But they quickly learn that other adventurers who can carry their own weight in a fight against civilization’s foes are worth any extra burden. Coddled city folk might not know how to feed themselves or find fresh water in the wild, but they make up for it in other ways.</p>
+			<h4>CREATING A RANGER</h4>
+			<p>As you create your ranger character, consider the nature of the training that gave you your particular capabilities. Did you train with a single mentor, wandering the wilds together until you mastered the ranger’s ways? Did you leave your apprenticeship, or was your mentor slain— perhaps by the same kind of monster that became your favored enemy? Or perhaps you learned your skills as part of a band of rangers affiliated with a druidic circle, trained in mystic paths as well as wilderness lore. You might be self-taught, a recluse who learned combat skills, tracking, and even a magical connection to nature through the necessity of surviving in the wilds.</p>
+			<p class="indent">What’s the source of your particular hatred of a certain kind of enemy? Did a monster kill someone you loved or destroy your home village? Or did you see too much of the destruction these monsters cause and commit yourself to reining in their depredations? Is your adventuring career a continuation of your work in protecting the borderlands, or a significant change? What made you join up with a band of adventurers? Do you find it challenging to teach new allies the ways of the wild, or do you welcome the relief from solitude that they offer?</p>
+			<h5>QUICK BUILD</h5>
+			<p>You can make a ranger quickly by following these suggestions. First, make Dexterity your highest ability score, followed by Wisdom. (Some rangers who focus on two-weapon fighting make Strength higher than Dexterity.) Second, choose the outlander background.</p>
+			<h3>CLASS FEATURES</h3>
+			<p>As a ranger, you gain the following class features.</p>
+			<h5>HIT POINTS</h5>
+			<p>
+				<span class="emphasis">Hit Dice:</span>1d10 per ranger level
+				<br />
+				<span class="emphasis">Hit Points at 1st Level:</span>10 + your Constitution modifier
+				<br />
+				<span class="emphasis">Hit Points at Higher Levels:</span>1d10 (or 6) + your Constitution modifier per ranger level after 1st
+				<br />
+			</p>
+			<h5>PROFICIENCIES</h5>
+			<p>
+				<span class="emphasis">Armor:</span>Light armor, medium armor, shields
+				<br />
+				<span class="emphasis">Weapons:</span>Simple weapons, martial weapons
+				<br />
+				<span class="emphasis">Tools:</span>None
+				<br />
+			</p>
+			<p>
+				<span class="emphasis">Saving Throws:</span>Strength, Dexterity
+				<br />
+				<span class="emphasis">Skills:</span>Choose three skills from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, and Survival
+				<br />
+			</p>
+			<h5>EQUIPMENT</h5>
+			<p>You start with the following equipment, in addition to the equipment granted by your background:</p>
+			<ul>
+				<li>
+					<i>(a)</i> scale mail or 
+					<i>(b)</i> leather armor
+				</li>
+				<li>
+					<i>(a)</i> two shortswords or 
+					<i>(b)</i> two simple melee weapons
+				</li>
+				<li>
+					<i>(a)</i> a dungeoneer’s pack or 
+					<i>(b)</i> an explorer’s pack
+				</li>
+				<li>A longbow and a quiver of 20 arrows</li>
+			</ul>
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_FAVORED_ENEMY" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_NATURAL_EXPLORER" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_FIGHTING_STYLE" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_COMBAT_SUPERIORITY" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_RANGER_ARCHETYPE" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_POULTICES" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_ASI" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_EXTRA_ATTACK" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_LANDS_STRIDE" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_NATURAL_ANTIVENOM" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_HIDE_IN_PLAIN_SIGHT" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_CALL_NATURAL_ALLIES" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_VANISH" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_RELENTLESS" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_FERAL_SENSES" />
+			<div element="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_FOE_SLAYER" />
+		</description>
+		<sheet display="false" alt="Ranger">
+			<description>A warrior who uses martial prowess and knowledge of nature to combat threats on the edges of civilization.</description>
+		</sheet>
+		<setters>
+			<set name="short">A warrior who uses martial prowess and knowledge of nature to combat threats on the edges of civilization.</set>
+			<set name="hd">d10</set>
+		</setters>
+		<rules>
+			<!-- <grant type="Grants" id="ID_INTERNAL_GRANTS_AVERAGE_HP_D10" /> -->
+
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" requirements="!ID_WOTC_UA20150406_PHB_MULTICLASS_RANGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" requirements="!ID_WOTC_UA20150406_PHB_MULTICLASS_RANGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" requirements="!ID_WOTC_UA20150406_PHB_MULTICLASS_RANGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" requirements="!ID_WOTC_UA20150406_PHB_MULTICLASS_RANGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" requirements="!ID_WOTC_UA20150406_PHB_MULTICLASS_RANGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_STRENGTH" requirements="!ID_WOTC_UA20150406_PHB_MULTICLASS_RANGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" requirements="!ID_WOTC_UA20150406_PHB_MULTICLASS_RANGER" />
+			<select type="Proficiency" name="Skill Proficiency (Ranger)" supports="Skill,Ranger" number="3" requirements="!ID_WOTC_UA20150406_PHB_MULTICLASS_RANGER" />
+
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_FAVORED_ENEMY" level="1"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_NATURAL_EXPLORER" level="1"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_FIGHTING_STYLE" level="2"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_COMBAT_SUPERIORITY" level="2"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_RANGER_ARCHETYPE" level="3"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_POULTICES" level="3"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_ASI" level="4"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_EXTRA_ATTACK" level="5"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_LANDS_STRIDE" level="8"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_NATURAL_ANTIVENOM" level="9"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_HIDE_IN_PLAIN_SIGHT" level="10"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_CALL_NATURAL_ALLIES" level="13"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_VANISH" level="14"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_RELENTLESS" level="17"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_FERAL_SENSES" level="18"/>
+			<grant type="Class Feature" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_FOE_SLAYER" level="20"/>
+		</rules>
+		<multiclass id="ID_WOTC_UA20150406_PHB_MULTICLASS_RANGER">
+			<prerequisite>Dexterity 13 and Wisdom 13</prerequisite>
+			<requirements>([dex:13],[wis:13]),!ID_WOTC_PHB_CLASS_RANGER</requirements>
+			<setters>
+				<set name="multiclass proficiencies">Light armor, medium armor, shields, simple weapons, martial weapons, one skill from the class’s skill list</set>
+			</setters>
+			<rules>
+				<grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS" />
+
+				<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
+				<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+				<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" />
+				<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" />
+				<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+				<select type="Proficiency" name="Skill Proficiency (Ranger)" supports="Skill,Ranger" number="1"/>
+			</rules>
+		</multiclass>
+	</element>
+	<element name="Favored Enemy" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_FAVORED_ENEMY">
+		<description>
+			<p>Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.</p>
+			<p class="indent">Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.</p>
+			<p class="indent">You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.</p>
+			<p class="indent">When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.</p>
+			<p class="indent">You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on Survival checks to track your favored enemies, as well as on Intelligence checks to recall information about them.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Favored Enemy" supports="Favored Enemy" level="1" />
+			<select type="Class Feature" name="Favored Enemy" supports="Favored Enemy" level="6" />
+			<select type="Class Feature" name="Favored Enemy" supports="Favored Enemy" level="14" />
+			<select type="Language" name="Language (Favored Enemy)" level="1" />
+			<select type="Language" name="Language (Favored Enemy)" level="6" />
+			<select type="Language" name="Language (Favored Enemy)" level="14" />
+		</rules>
+	</element>
+	<element name="Natural Explorer" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_NATURAL_EXPLORER">
+		<description>
+			<p>You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, swamp, or the Underdark. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.</p>
+			<p class="indent">While traveling for an hour or more in your favored terrain, you gain the following benefits:</p>
+			<ul>
+				<li>Difficult terrain doesn’t slow your group’s travel.</li>
+				<li>Your group can’t become lost except by magical means.</li>
+				<li>Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.</li>
+				<li>If you are traveling alone, you can move stealthily at a normal pace.</li>
+				<li>When you forage, you find twice as much food as you normally would.</li>
+				<li>While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.</li>
+			</ul>
+			<p class="indent">You choose additional favored terrain types at 6th and 10th level.</p>
+		</description>
+		<sheet>
+			<description>When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in. While traveling for an hour or more in your favored terrain, you gain benefits.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Favored Terrain" supports="Favored Terrain" level="1" />
+			<select type="Class Feature" name="Favored Terrain" supports="Favored Terrain" level="6" />
+			<select type="Class Feature" name="Favored Terrain" supports="Favored Terrain" level="10" />
+		</rules>
+	</element>
+	<element name="Fighting Style" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_FIGHTING_STYLE">
+		<description>
+			<p>At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.</p>
+			<h5>ARCHERY</h5>
+			<p>You gain a +2 bonus to attack rolls you make with ranged weapons.</p>
+			<h5>DEFENSE</h5>
+			<p>While you are wearing armor, you gain a +1 bonus to AC.</p>
+			<h5>DUELING</h5>
+			<p>When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.</p>
+			<h5>TWO-WEAPON FIGHTING</h5>
+			<p>When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.</p>
+		</description>
+		<sheet>
+			<description></description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Fighting Style" supports="Fighting Style,Ranger" level="2"/>
+		</rules>
+	</element>
+	<element name="Combat Superiority" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_COMBAT_SUPERIORITY">
+		<description>
+			<p>At 2nd level, you learn maneuvers that are fueled by special dice called superiority dice.</p>
+			<p class="indent"><b>Maneuvers.</b> You learn two maneuvers of your choice, which are chosen from the list of maneuvers available to fighters with the Battle Master archetype. Many maneuvers enhance an attack in some way. You can use only one maneuver per attack.</p>
+			<p class="indent">You learn one additional maneuver of your choice at 5th, 9th, 13th, and 17th levels. Each time you learn a new maneuver, you can also replace one maneuver you know with a different one.</p>
+			<p class="indent"><b>Superiority Dice.</b> You have four superiority dice, which are d8s. A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest.</p>
+			<p class="indent">You gain another superiority die at 9th level and one more at 17th level.</p>
+			<p class="indent"><b>Saving Throws.</b> Some of your maneuvers require your target to make a saving throw to resist the maneuver’s effects. The saving throw DC is calculated as follows:</p>
+			<p><b>Maneuver save DC</b> = 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice).</p>
+		</description>
+		<sheet>
+			<description>You learn maneuvers that are fueled by special dice called superiority dice. You have {{superiority dice:amount}} superiority dice which are d8s. Your DC is {{superiority dice:dc}}.</description>
+		</sheet>
+		<rules>
+			<stat name="superiority dice:amount" value="4" />
+			<stat name="superiority dice:amount" value="1" level="9" />
+			<stat name="superiority dice:amount" value="1" level="17" />
+			<stat name="superiority dice:dc" value="8" />
+			<stat name="superiority dice:dc" value="proficiency" />
+			<stat name="superiority dice:dc:ability" value="strength:modifier" bonus="ability"/>
+			<stat name="superiority dice:dc:ability" value="dexterity:modifier" bonus="ability"/>
+			<stat name="superiority dice:dc" value="superiority dice:dc:ability" />
+			<select type="Archetype Feature" name="Combat Superiority (Level 2)" supports="Maneuver,Battle Master" number="2" />
+			<select type="Archetype Feature" name="Combat Superiority (Level 5)" supports="Maneuver,Battle Master" level="5" />
+			<select type="Archetype Feature" name="Combat Superiority (Level 9)" supports="Maneuver,Battle Master" level="9" />
+			<select type="Archetype Feature" name="Combat Superiority (Level 13)" supports="Maneuver,Battle Master" level="13" />
+			<select type="Archetype Feature" name="Combat Superiority (Level 17)" supports="Maneuver,Battle Master" level="17" />
+		</rules>
+	</element>
+	<element name="Ranger Archetype" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_RANGER_ARCHETYPE">
+		<description>
+			<p>At 3rd level, you choose an archetype that you strive to emulate: Hunter or Beast Master, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 7th, 11th, and 15th level.</p>
+		</description>
+		<sheet>
+			<description></description>
+		</sheet>
+		<rules>
+			<select type="Archetype" name="Ranger Archetype" supports="Ranger Archetype" />
+		</rules>
+	</element>
+	<element name="Poultices" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_POULTICES">
+		<description>
+			<p>At 3rd level, you can create special herbal poultices that have healing power comparable to some potions. You can spend 1 hour gathering herbs and preparing herbal poultices using treated bandages to create a number of such poultices equal to your Wisdom modifier (minimum 1). You can carry a number of poultices at one time equal to your Wisdom modifier (minimum 1). The poultices you create cannot be applied by anyone but you. After 24 hours, any poultices that you have not used lose their potency.</p>
+			<p class="indent">If you spend 1 minute applying one of your poultices to a wounded humanoid creature, thereby expending its use, that creature regains 1d6 hit points for every two ranger levels you have (rounded up).</p>
+		</description>
+		<sheet>
+			<description>You can spend 1 hour gathering herbs and preparing herbal poultices using treated bandages to create a number of such poultices equal to {{poultices:produce and carry}}. You can carry a number of poultices at one time equal to {{poultices:produce and carry}}. The poultices you create cannot be applied by anyone but you. After 24 hours, any poultices that you have not used lose their potency. If you spend 1 minute applying one of your poultices to a wounded humanoid creature, thereby expending its use, that creature regains {{poultices:dice amount}}d6 hit points.</description>
+		</sheet>
+		<rules>
+			<stat name="poultices:produce and carry" value="wisdom:modifier" bonus="base"/>
+			<stat name="poultices:produce and carry" value="1" bonus="base"/>
+			<stat name="poultices:dice amount" value="level:spell-less ranger:half:up" bonus="base"/>
+		</rules>
+	</element>
+	<element name="Ability Score Improvement (Ranger)" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_ASI">
+		<description>
+			<p>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<!-- <grant type="Class Feature" id="ID_INTERNAL_CLASS_FEATURE_ASI_4_RANGER" level="4" requirements="!ID_INTERNAL_OPTION_ALLOW_FEATS" />
+			<grant type="Class Feature" id="ID_INTERNAL_CLASS_FEATURE_ASI_8_RANGER" level="8" requirements="!ID_INTERNAL_OPTION_ALLOW_FEATS" />
+			<grant type="Class Feature" id="ID_INTERNAL_CLASS_FEATURE_ASI_12_RANGER" level="12" requirements="!ID_INTERNAL_OPTION_ALLOW_FEATS" />
+			<grant type="Class Feature" id="ID_INTERNAL_CLASS_FEATURE_ASI_16_RANGER" level="16" requirements="!ID_INTERNAL_OPTION_ALLOW_FEATS" />
+			<grant type="Class Feature" id="ID_INTERNAL_CLASS_FEATURE_ASI_19_RANGER" level="19" requirements="!ID_INTERNAL_OPTION_ALLOW_FEATS" /> -->
+			<select type="Class Feature" name="Improvement Option (Ranger 4)" supports="Improvement Option,Ranger,4" level="4" />
+			<select type="Class Feature" name="Improvement Option (Ranger 8)" supports="Improvement Option,Ranger,8" level="8" />
+			<select type="Class Feature" name="Improvement Option (Ranger 12)" supports="Improvement Option,Ranger,12" level="12" />
+			<select type="Class Feature" name="Improvement Option (Ranger 16)" supports="Improvement Option,Ranger,16" level="16" />
+			<select type="Class Feature" name="Improvement Option (Ranger 19)" supports="Improvement Option,Ranger,19" level="19" />
+		</rules>
+	</element>
+	<element name="Extra Attack" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_EXTRA_ATTACK">
+		<description>
+			<p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.</p>
+		</description>
+		<sheet>
+			<description>You can attack twice, instead of once, whenever you take the Attack action on your turn.</description>
+		</sheet>
+	<rules>
+		<stat name="extra attack:count" value="2" level="5" bonus="extra attack" />
+	</rules>
+	</element>
+	<element name="Land’s Stride" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_LANDS_STRIDE">
+		<description>
+			<p>Starting at 8th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.</p>
+			<p class="indent">In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the entangle spell.</p>
+		</description>
+		<sheet>
+			<description>Moving through nonmagical difficult terrain costs you no extra movement. In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the entangle spell.</description>
+		</sheet>
+		<rules />
+	</element>
+	<element name="Natural Antivenom" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_NATURAL_ANTIVENOM">
+		<description>
+			<p>Starting at 9th level, you have advantage on saving throws against poison and have resistance to poison damage. Additionally, you can use one of your poultices to cure one poison effect on the creature you are applying it to, in addition to restoring hit points.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on saving throws against poison and you can use one of your poultices to cure one poison effect on the creature you are applying it to, in addition to restoring hit points.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+		</rules>
+	</element>
+	<element name="Hide in Plain Sight" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_HIDE_IN_PLAIN_SIGHT">
+		<description>
+			<p>Starting at 10th level, you can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other naturally occurring materials with which to create your camouflage.</p>
+			<p class="indent">Once you are camouflaged in this way, you can try to hide by pressing yourself up against a solid surface, such as a tree or wall, that is at least as tall and wide as you are. You gain a +10 bonus to Dexterity (Stealth) checks as long as you remain there without moving or taking actions. Once you move or take an action or a reaction, you must camouflage yourself again to gain this benefit.</p>
+		</description>
+		<sheet>
+			<description>You can spend 1 minute creating camouflage for yourself. You gain a +10 bonus to Stealth checks as long as you remain there without moving or taking actions.</description>
+		</sheet>
+		<rules></rules>
+	</element>
+	<element name="Call Natural Allies" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_CALL_NATURAL_ALLIES">
+		<description>
+			<p>Starting at 13th level, when you are in an area of your favored terrain, you can call natural creatures from that terrain to fight on your behalf, using your attunement to the natural world to convince them to aid you. The DM chooses beasts appropriate to the terrain to come to your aid from among those that could hear you and that are within 1 mile of you, in one of the following groups:</p>
+			<ul>
+				<li>One beast of challenge rating 2 or lower</li>
+				<li>Two beasts of challenge rating 1 or lower</li>
+				<li>Four beasts of challenge rating 1/2 or lower</li>
+				<li>Eight beasts of challenge rating 1/4 or lower</li>
+			</ul>
+			<p>These beasts approach you from their current location, and will fight alongside you, attacking any creatures that are hostile to you. They are friendly to you and your comrades, and you roll initiative for the called creatures as a group, which takes its own turns. The DM has the creatures’ statistics.</p>
+			<p class="indent">After 1 hour, these beasts return to their previous location. Once you use this feature, you cannot use it again in the same general area for 24 hours, since the same animals will not repeatedly heed your call.</p>
+		</description>
+		<sheet>
+			<description>When you are in an area of your favored terrain, you can call natural creatures from that terrain to fight on your behalf, using your attunement to the natural world to convince them to aid you. The DM chooses beasts appropriate to the terrain to come to your aid from among those that could hear you and that are within 1 mile of you, in one of the following groups: One beast of challenge rating 2 or lower; Two beasts of challenge rating 1 or lower; Four beasts of challenge rating 1/2 or lower; Eight beasts of challenge rating 1/4 or lower. They are friendly to you and your comrades, and you roll initiative for the called creatures as a group, which takes its own turns. After 1 hour, these beasts return to their previous location. Once you use this feature, you cannot use it again in the same general area for 24 hours.</description>
+		</sheet>
+	</element>
+	<element name="Vanish" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_VANISH">
+		<description>
+			<p>Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can’t be tracked by nonmagical means, unless you choose to leave a trail.</p>
+		</description>
+		<sheet>
+			<description>You can use the Hide action as a bonus action on your turn. Also, you can’t be tracked by nonmagical means, unless you choose to leave a trail.</description>
+		</sheet>
+		<rules />
+	</element>
+	<element name="Relentless" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_RELENTLESS">
+		<description>
+			<p>Starting at 17th level, when you roll initiative and have no superiority dice remaining, you regain 1 superiority die.</p>
+		</description>
+		<sheet>
+			<description>When you roll initiative and have no superiority dice remaining, you regain 1 superiority die.</description>
+		</sheet>
+	</element>
+	<element name="Feral Senses" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_FERAL_SENSES">
+		<description>
+			<p>At 18th level, you gain preternatural senses that help you fight creatures you can’t see. When you attack a creature you can’t see, your inability to see it doesn’t impose disadvantage on your attack rolls against it.</p>
+			<p class="indent">You are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn’t hidden from you and you aren’t blinded or deafened.</p>
+		</description>
+		<sheet>
+			<description>When you attack a creature you can’t see, your inability to see it doesn’t impose disadvantage on your attack rolls against it. You are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn’t hidden from you and you aren’t blinded or deafened.</description>
+		</sheet>
+		<rules />
+	</element>
+	<element name="Foe Slayer" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_FOE_SLAYER">
+		<description>
+			<p>At 20th level, you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied.</p>
+		</description>
+		<sheet usage="1/Turn">
+			<description>You can add {{wisdom:modifier}} to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied.</description>
+		</sheet>
+	</element>
+
+	<!-- Append Tags for Ranger Multiclass and Beast Master Archetype
+	<append id="ID_WOTC_PHB_MULTICLASS_RANGER">
+		<requirements>!ID_WOTC_UA20150406_CLASS_SPELL_LESS_RANGER</requirements>
+	</append>
+
+	<append id="ID_WOTC_ARCHETYPEFEATURE_RANGER_SHARE_SPELLS">
+		<requirements>!ID_WOTC_UA20150406_CLASS_SPELL_LESS_RANGER</requirements>
+	</append>
+
+	<append id="ID_WOTC_ARCHETYPE_RANGER_BEAST_MASTER">
+		<rules>
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_BEASTLY_COORDINATION" level="15" requirements="ID_WOTC_UA20150406_CLASS_SPELL_LESS_RANGER"/>
+		</rules>
+	</append> -->
+	<!-- Beast Master Archetype Feature
+	<element name="Beastly Coordination" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_BEASTLY_COORDINATION">
+		<description>
+			<p>Beginning at 15th level, when an attacker that you can see hits your beast companion with an attack, you can call out a warning. If your beast companion can hear you, it can use its reaction to halve the attack’s damage against it.</p>
+		</description>
+		<sheet action="Companion's Reaction">
+			<description>When an attacker that you can see hits your beast companion with an attack, you can call out a warning. If your beast companion can hear you, it can use its reaction to halve the attack’s damage against it.</description>
+		</sheet>
+	</element> -->
+
+	<!-- Rule Element 2-->
+	<element name="Favored Soul" type="Rule" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_RULE_FAVORED_SOUL">
+		<description>
+			<p>As an example of how creating a new class option could work, let’s  examine a design that was a full-fledged class in the third edition supplement <i>Complete Divine</i>: the favored soul. This might be an appealing archetype if you are running a game where the gods are going to have a big impact on the world, and where the Chosen of those gods (individuals bestowed with a fragment of a god’s divine power) are prominent players in the campaign. To reflect this tone,  let’s create the Favored Soul as anew origin for the sorcerer class. This decision reflects the idea that the character is someone who is fundamentally changed by the touch of his or her deity, which awakens powerful magical abilities.</p>
+			<p class="indent">Looking at the existing sorcerous origins, we can determine that, at 1st level, an origin provides not only the explanation for the source of the sorcerer’s power, but also a flourish on the way that character plays. Since this sorcerer is going to be gaining its magic by being imbued with divine power, we decide to give the Favored Soul access to some spells normally gained by the cleric. Any time we expand the known spells of the sorcerer, we run the risk of overshadowing the other sorcerous origins, since the limitation on the number of spells the sorcerer knows has a big impact on how the class plays. This indicates that the other class features probably shouldn’t all tie closely to the sorcerer’s spellcasting, since that aspect of the sorcerer is already getting quite a boost. Since the favored soul class was a little more martial in its previous incarnation, we decide to give our sorcerer some better armor and access to simple weapons, similar to the defensive bonuses gained by the Draconic Bloodline sorcerer at 1st level.</p>
+			<p class="indent">At 6th level, the other sorcerous origins provide features that have an impact on the character’s combat abilities. Looking at the bard class, we can see that the College of Valor gains the Extra Attack class feature at the same level, and we decide to give that to the Favored Soul to further enhance its martial bent.</p>
+			<p class="indent">At 14th level, the sorcerous origins provide some measure of utility, with little direct impact on spellcasting or combat capabilities. Here, we choose to model the Favored Soul’s feature after the Draconic Bloodline’s feature at the same level, reflecting the touch of the divine with some imagery typically associated with divinity: wings.</p>
+			<p class="indent">At 18th level, the sorcerous origins provide options that are both potent and strongly linked to the origin’s central theme. Since the sorcerer will have access to higher-level spells at this level, and the feature we gave it at 1st level to provide some cleric spells won’t have as much of an impact, we decide to tie this class feature to those cleric spells, both to incentivize the continued use of those spells, and to give the Favored Soul a little more resilience in the face of high-level threats.</p>
+		</description>
+		<setters>
+			<set name="keywords">favored, soul, origin, sorcerous</set>
+		</setters>
+	</element>
+
+	<!-- Favored Soul -->
+	<element name="Favored Soul" type="Archetype" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL">
+		<supports>Sorcerous Origin</supports>
+		<description>
+			<div element="ID_WOTC_UA20150406_RULE_FAVORED_SOUL" />
+			<p class="indent">When we are done with this initial design, here’s what the Favored Soul sorcerous origin looks like:</p>
+			<div element="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_CHOSEN_OF_THE_GODS" />
+			<div element="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_BONUS_PROFICIENCIES" />
+			<div element="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_EXTRA_ATTACK" />
+			<div element="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_DIVINE_WINGS" />
+			<div element="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_POWER_OF_THE_CHOSEN" />
+		</description>
+		<sheet>
+			<description>Sometimes the spark of magic that fuels a sorcerer comes from a divine source that glimmers within the soul.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_CHOSEN_OF_THE_GODS" level="1" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_BONUS_PROFICIENCIES" level="1" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_EXTRA_ATTACK" level="6" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_DIVINE_WINGS" level="14" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_POWER_OF_THE_CHOSEN" level="18" />
+		</rules>
+	</element>
+	<element name="Chosen of the Gods" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_CHOSEN_OF_THE_GODS">
+		<description>
+			<p>At 1st level, you choose one of the cleric class’s divine domains. You add that domain’s spells for 1st-level clerics to your known spells. These spells do not count against the number of spells you can know, and they are considered to be sorcerer spells for you. When you reach 3rd, 5th, 7th, and 9th levels in the sorcerer class, you likewise learn your domain’s spells that become available at those levels.</p>
+		</description>
+		<sheet display="false"/>
+		<rules>
+			<select type="Archetype Feature" name="Divine Domain (Favored Soul)" supports="Favored Soul Divine Domain" />
+		</rules>
+	</element>
+
+	<!-- Favored Soul Divine Domain elements-->
+
+	<element name="Bonus Proficiencies" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_BONUS_PROFICIENCIES">
+		<description>
+			<p>At 1st level, you gain proficiency in light armor, medium armor, shields, and simple weapons.</p>
+		</description>
+		<sheet display="false">
+			<description></description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" />
+		</rules>
+	</element>
+	<element name="Extra Attack" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_EXTRA_ATTACK">
+		<description>
+			<p>Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.</p>
+		</description>
+		<sheet>
+			<description>You can attack twice, instead of once, whenever you take the Attack action on your turn</description>
+		</sheet>
+		<rules>
+			<stat name="extra attack:count" value="2" bonus="extra attack" />
+		</rules>
+	</element>
+	<element name="Divine Wings" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_DIVINE_WINGS">
+		<description>
+			<p>At 14th level, you gain the ability to sprout a pair of wings from your back (feathered or bat-like, your choice), gaining a flying speed equal to your current walking speed. You can create these wings as a bonus action on your turn. They last until you dismiss them as a bonus action on your turn.</p>
+			<p class="indent">You can’t manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>You can sprout a pair of wings from your back (feathered or bat-like, your choice), gaining a flying speed equal to your current walking speed. They last until you dismiss them as a bonus action on your turn. You can’t manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them.</description>
+		</sheet>
+	</element>
+	<element name="Power of the Chosen" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_POWER_OF_THE_CHOSEN">
+		<description>
+			<p>Starting at 18th level, when you cast one of the spells you learned from your Chosen of the Gods class feature, you regain hit points equal to your Charisma modifier (minimum +1) + the spell’s level.</p>
+			<p class="indent">Once you use this feature, you can’t use it again until you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>When you cast one of the spells you learned from your Chosen of the Gods class feature, you regain hit points equal to your {{power of the chosen}} + the spell’s level.</description>
+		</sheet>
+		<rules>
+			<stat name="power of the chosen" value="1" bonus="base" />
+			<stat name="power of the chosen" value="charisma:modifier" bonus="base" />
+		</rules>
+	</element>
+</elements>
