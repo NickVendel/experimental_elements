@@ -278,7 +278,7 @@
 			<description></description>
 		</sheet>
 		<rules>
-			<select type="Archetype" name="Ranger Archetype" supports="Ranger Archetype" />
+			<select type="Archetype" name="Ranger Archetype" supports="Spell-less Ranger" />
 		</rules>
 	</element>
 	<element name="Poultices" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_POULTICES">
@@ -332,7 +332,6 @@
 		<sheet>
 			<description>Moving through nonmagical difficult terrain costs you no extra movement. In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the entangle spell.</description>
 		</sheet>
-		<rules />
 	</element>
 	<element name="Natural Antivenom" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_NATURAL_ANTIVENOM">
 		<description>
@@ -378,7 +377,6 @@
 		<sheet>
 			<description>You can use the Hide action as a bonus action on your turn. Also, you can’t be tracked by nonmagical means, unless you choose to leave a trail.</description>
 		</sheet>
-		<rules />
 	</element>
 	<element name="Relentless" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_RELENTLESS">
 		<description>
@@ -396,7 +394,6 @@
 		<sheet>
 			<description>When you attack a creature you can’t see, your inability to see it doesn’t impose disadvantage on your attack rolls against it. You are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn’t hidden from you and you aren’t blinded or deafened.</description>
 		</sheet>
-		<rules />
 	</element>
 	<element name="Foe Slayer" type="Class Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_CLASSFEATURE_RANGER_FOE_SLAYER">
 		<description>
@@ -407,34 +404,176 @@
 		</sheet>
 	</element>
 
-	<!-- Append Tags for Ranger Multiclass and Beast Master Archetype
-	<append id="ID_WOTC_PHB_MULTICLASS_RANGER">
-		<requirements>!ID_WOTC_UA20150406_CLASS_SPELL_LESS_RANGER</requirements>
-	</append>
-
-	<append id="ID_WOTC_ARCHETYPEFEATURE_RANGER_SHARE_SPELLS">
-		<requirements>!ID_WOTC_UA20150406_CLASS_SPELL_LESS_RANGER</requirements>
-	</append>
-
-	<append id="ID_WOTC_ARCHETYPE_RANGER_BEAST_MASTER">
+	<!-- Beast Master -->
+	<element name="Beast Master" type="Archetype" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_BEAST_MASTER">
+		<supports>Spell-less Ranger</supports>
+		<description>
+			<p>The Beast Master archetype embodies a friendship between the civilized races and the beasts of the world. United in focus, beast and ranger work as one to fight the monstrous foes that threaten civilization and the wilderness alike. Emulating the Beast Master archetype means committing yourself to this ideal, working in partnership with an animal as its companion and friend.</p>
+			<div element="ID_WOTC_UA20150406_RANGER_ARCHETYPE_BEAST_MASTER_RANGERS_COMPANION" />
+			<div element="ID_WOTC_UA20150406_RANGER_ARCHETYPE_BEAST_MASTER_EXCEPTIONAL_TRAINING" />
+			<div element="ID_WOTC_UA20150406_RANGER_ARCHETYPE_BEAST_MASTER_BESTIAL_FURY" />
+			<p>As a replacement for Share Spells, we could also consider the following feature:</p>
+			<div element="ID_WOTC_UA20150406_RANGER_ARCHETYPE_BEAST_MASTER_BEASTLY_COORDINATION" />
+		</description>
+		<sheet>
+			<description>The Beast Master archetype embodies a friendship between the civilized races and the beasts of the world.</description>
+		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_BEASTLY_COORDINATION" level="15" requirements="ID_WOTC_UA20150406_CLASS_SPELL_LESS_RANGER"/>
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_BEAST_MASTER_RANGERS_COMPANION" level="3" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_BEAST_MASTER_EXCEPTIONAL_TRAINING" level="7" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_BEAST_MASTER_BESTIAL_FURY" level="11" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_BEAST_MASTER_BEASTLY_COORDINATION" level="15" />
 		</rules>
-	</append> -->
-	<!-- Beast Master Archetype Feature
-	<element name="Beastly Coordination" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_RANGER_BEAST_MASTER_BEASTLY_COORDINATION">
+	</element>
+	<element name="Ranger’s Companion" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_BEAST_MASTER_RANGERS_COMPANION">
+		<description>
+			<p>At 3rd level, you gain a beast companion that accompanies you on your adventures and is trained to fight alongside you. Choose a beast that is no larger than Medium and that has a challenge rating of 1/4 or lower (appendix D presents statistics for the hawk, mastiff, and panther as examples). Add your proficiency bonus to the beast’s AC, attack rolls, and damage rolls, as well as to any saving throws and skills it is proficient in. Its hit point maximum equals its normal maximum or four times your ranger level, whichever is higher.</p>
+			<p class="indent">The beast obeys your commands as best as it can. It takes its turn on your initiative, though it doesn’t take an action unless you command it to. On your turn, you can verbally command the beast where to move (no action required by you). You can use your action to verbally command it to take the Attack, Dash, Disengage, Dodge, or Help action. Once you have the Extra Attack feature, you can make one weapon attack yourself when you command the beast to take the Attack action.</p>
+			<p class="indent">While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace.</p>
+			<p class="indent">If the beast dies, you can obtain another one by spending 8 hours magically bonding with another beast that isn’t hostile to you, either the same type of beast as before or a different one.</p>
+		</description>
+		<sheet>
+			<description>The beast obeys your commands as best as it can. It takes its turn on your initiative, though it doesn’t take an action unless you command it to. On your turn, you can verbally command the beast where to move (no action required by you). You can use your action to verbally command it to take the Attack, Dash, Disengage, Dodge, or Help action. Once you have the Extra Attack feature, you can make one weapon attack yourself when you command the beast to take the Attack action.
+		While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace.
+		If the beast dies, you can obtain another one by spending 8 hours magically bonding with another beast that isn’t hostile to you, either the same type of beast as before or a different one.</description>
+		</sheet>
+		<rules>
+		<select type="Companion" name="Ranger’s Companion" supports="Beast,(Tiny||Small||Medium),(1/4||1/8||0)" />
+		<stat name="companion:ac" value="proficiency" />
+		<stat name="companion:attack" value="proficiency" />
+		<stat name="companion:damage" value="proficiency" />
+		<!-- 4x ranger level -->
+		<stat name="_alternative:hp:max" value="level:ranger" />
+		<stat name="_alternative:hp:max" value="level:ranger" />
+		<stat name="_alternative:hp:max" value="level:ranger" />
+		<stat name="_alternative:hp:max" value="level:ranger" />
+
+		<stat name="companion:hp:max" value="_alternative:hp:max" bonus="base" />
+		</rules>
+	</element>
+	<element name="Exceptional Training" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_BEAST_MASTER_EXCEPTIONAL_TRAINING">
+		<description>
+			<p>Beginning at 7th level, on any of your turns when your beast companion doesn’t attack, you can use a bonus action to command the beast to take the Dash, Disengage, Dodge, or Help action on its turn.</p>
+		</description>
+		<sheet>
+			<description>On any of your turns when your beast companion doesn’t attack, you can use a bonus action to command the beast to take the Dash, Disengage, Dodge, or Help action on its turn.</description>
+		</sheet>
+	</element>
+	<element name="Bestial Fury" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_BEAST_MASTER_BESTIAL_FURY">
+		<description>
+			<p>Starting at 11th level, your beast companion can make two attacks when you command it to use the Attack action.</p>
+		</description>
+		<sheet>
+			<description>Your beast companion can make two attacks when you command it to use the Attack action.</description>
+		</sheet>
+	</element>
+	<element name="Beastly Coordination" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_BEAST_MASTER_BEASTLY_COORDINATION">
 		<description>
 			<p>Beginning at 15th level, when an attacker that you can see hits your beast companion with an attack, you can call out a warning. If your beast companion can hear you, it can use its reaction to halve the attack’s damage against it.</p>
 		</description>
-		<sheet action="Companion's Reaction">
+		<sheet>
 			<description>When an attacker that you can see hits your beast companion with an attack, you can call out a warning. If your beast companion can hear you, it can use its reaction to halve the attack’s damage against it.</description>
 		</sheet>
-	</element> -->
+	</element>
+
+	<element name="Hunter" type="Archetype" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_HUNTER">
+		<supports>Spell-less Ranger</supports>
+		<description>
+			<p>Emulating the Hunter archetype means accepting your place as a bulwark between civilization and the terrors of the wilderness. As you walk the Hunter’s path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.</p>
+			<div element="ID_WOTC_UA20150406_RANGER_ARCHETYPE_HUNTER_HUNTERS_PREY" />
+			<div element="ID_WOTC_UA20150406_RANGER_ARCHETYPE_HUNTER_DEFENSIVE_TACTICS" />
+			<div element="ID_WOTC_UA20150406_RANGER_ARCHETYPE_HUNTER_MULTIATTACK" />
+			<div element="ID_WOTC_UA20150406_RANGER_ARCHETYPE_HUNTER_SUPERIOR_HUNTERS_DEFENSE" />
+		</description>
+		<sheet>
+			<description>Emulating the Hunter archetype means accepting your place as a bulwark between civilization and the terrors of the wilderness.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_HUNTER_HUNTERS_PREY" level="3" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_HUNTER_DEFENSIVE_TACTICS" level="7" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_HUNTER_MULTIATTACK" level="11" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_HUNTER_SUPERIOR_HUNTERS_DEFENSE" level="15" />
+		</rules>
+	</element>
+	<element name="Hunter’s Prey" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_HUNTER_HUNTERS_PREY">
+		<description>
+			<p>At 3rd level, you gain one of the following features of your choice.</p>
+			<p>
+				<span class="feature">Colossus Slayer.</span>Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it’s below its hit point maximum. You can deal this extra damage only once per turn.
+				<br/>
+				<span class="feature">Giant Killer.</span>When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.
+				<br/>
+				<span class="feature">Horde Breaker.</span>Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon.
+				<br/>
+			</p>
+		</description>
+		<sheet>
+			<description></description>
+		</sheet>
+		<rules>
+			<select type="Archetype Feature" name="Hunter’s Prey" supports="Hunters Pray" />
+		</rules>
+	</element>
+	<element name="Defensive Tactics" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_HUNTER_DEFENSIVE_TACTICS">
+		<description>
+			<p>At 7th level, you gain one of the following features of your choice.</p>
+			<p>
+				<span class="feature">Escape the Horde.</span>Opportunity attacks against you are made with disadvantage.
+				<br/>
+				<span class="feature">Multiattack Defense.</span>When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn.
+				<br/>
+				<span class="feature">Steel Will.</span>You have advantage on saving throws against being frightened.
+				<br/>
+			</p>
+		</description>
+		<sheet>
+			<description></description>
+		</sheet>
+		<rules>
+			<select type="Archetype Feature" name="Defensive Tactics" supports="Defensive Tactics" />
+		</rules>
+	</element>
+	<element name="Multiattack" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_HUNTER_MULTIATTACK">
+		<description>
+			<p>At 11th level, you gain one of the following features of your choice.</p>
+			<p>
+				<span class="feature">Volley.</span>You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon’s range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.
+				<br/>
+				<span class="feature">Whirlwind Attack.</span>You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target.
+				<br/>
+			</p>
+		</description>
+		<sheet>
+			<description></description>
+		</sheet>
+		<rules>
+			<select type="Archetype Feature" name="Multiattack" supports="Multiattack" />
+		</rules>
+	</element>
+	<element name="Superior Hunter’s Defense" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_RANGER_ARCHETYPE_HUNTER_SUPERIOR_HUNTERS_DEFENSE">
+		<description>
+			<p>At 15th level, you gain one of the following features of your choice.</p>
+			<p>
+				<span class="feature">Evasion.</span>You can nimbly dodge out of the way of certain area effects, such as a red dragon’s fiery breath or a lightning bolt spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.
+				<br/>
+				<span class="feature">Stand Against the Tide.</span>When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice.
+				<br/>
+				<span class="feature">Uncanny Dodge.</span>When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack’s damage against you.
+				<br/>
+			</p>
+		</description>
+		<sheet>
+			<description></description>
+		</sheet>
+		<rules>
+			<select type="Archetype Feature" name="Superior Hunter’s Defense" supports="Superior Hunters Defense" />
+		</rules>
+	</element>
 
 	<!-- Rule Element 2-->
 	<element name="Favored Soul" type="Rule" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_RULE_FAVORED_SOUL">
 		<description>
-			<p>As an example of how creating a new class option could work, let’s  examine a design that was a full-fledged class in the third edition supplement <i>Complete Divine</i>: the favored soul. This might be an appealing archetype if you are running a game where the gods are going to have a big impact on the world, and where the Chosen of those gods (individuals bestowed with a fragment of a god’s divine power) are prominent players in the campaign. To reflect this tone,  let’s create the Favored Soul as anew origin for the sorcerer class. This decision reflects the idea that the character is someone who is fundamentally changed by the touch of his or her deity, which awakens powerful magical abilities.</p>
+			<p>As an example of how creating a new class option could work, let’s examine a design that was a full-fledged class in the third edition supplement <i>Complete Divine</i>: the favored soul. This might be an appealing archetype if you are running a game where the gods are going to have a big impact on the world, and where the Chosen of those gods (individuals bestowed with a fragment of a god’s divine power) are prominent players in the campaign. To reflect this tone, let’s create the Favored Soul as anew origin for the sorcerer class. This decision reflects the idea that the character is someone who is fundamentally changed by the touch of his or her deity, which awakens powerful magical abilities.</p>
 			<p class="indent">Looking at the existing sorcerous origins, we can determine that, at 1st level, an origin provides not only the explanation for the source of the sorcerer’s power, but also a flourish on the way that character plays. Since this sorcerer is going to be gaining its magic by being imbued with divine power, we decide to give the Favored Soul access to some spells normally gained by the cleric. Any time we expand the known spells of the sorcerer, we run the risk of overshadowing the other sorcerous origins, since the limitation on the number of spells the sorcerer knows has a big impact on how the class plays. This indicates that the other class features probably shouldn’t all tie closely to the sorcerer’s spellcasting, since that aspect of the sorcerer is already getting quite a boost. Since the favored soul class was a little more martial in its previous incarnation, we decide to give our sorcerer some better armor and access to simple weapons, similar to the defensive bonuses gained by the Draconic Bloodline sorcerer at 1st level.</p>
 			<p class="indent">At 6th level, the other sorcerous origins provide features that have an impact on the character’s combat abilities. Looking at the bard class, we can see that the College of Valor gains the Extra Attack class feature at the same level, and we decide to give that to the Favored Soul to further enhance its martial bent.</p>
 			<p class="indent">At 14th level, the sorcerous origins provide some measure of utility, with little direct impact on spellcasting or combat capabilities. Here, we choose to model the Favored Soul’s feature after the Draconic Bloodline’s feature at the same level, reflecting the touch of the divine with some imagery typically associated with divinity: wings.</p>
@@ -451,24 +590,24 @@
 		<description>
 			<div element="ID_WOTC_UA20150406_RULE_FAVORED_SOUL" />
 			<p class="indent">When we are done with this initial design, here’s what the Favored Soul sorcerous origin looks like:</p>
-			<div element="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_CHOSEN_OF_THE_GODS" />
-			<div element="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_BONUS_PROFICIENCIES" />
-			<div element="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_EXTRA_ATTACK" />
-			<div element="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_DIVINE_WINGS" />
-			<div element="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_POWER_OF_THE_CHOSEN" />
+			<div element="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_CHOSEN_OF_THE_GODS" />
+			<div element="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_BONUS_PROFICIENCIES" />
+			<div element="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_EXTRA_ATTACK" />
+			<div element="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_DIVINE_WINGS" />
+			<div element="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_POWER_OF_THE_CHOSEN" />
 		</description>
 		<sheet>
 			<description>Sometimes the spark of magic that fuels a sorcerer comes from a divine source that glimmers within the soul.</description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_CHOSEN_OF_THE_GODS" level="1" />
-			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_BONUS_PROFICIENCIES" level="1" />
-			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_EXTRA_ATTACK" level="6" />
-			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_DIVINE_WINGS" level="14" />
-			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_POWER_OF_THE_CHOSEN" level="18" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_CHOSEN_OF_THE_GODS" level="1" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_BONUS_PROFICIENCIES" level="1" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_EXTRA_ATTACK" level="6" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_DIVINE_WINGS" level="14" />
+			<grant type="Archetype Feature" id="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_POWER_OF_THE_CHOSEN" level="18" />
 		</rules>
 	</element>
-	<element name="Chosen of the Gods" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_CHOSEN_OF_THE_GODS">
+	<element name="Chosen of the Gods" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_CHOSEN_OF_THE_GODS">
 		<description>
 			<p>At 1st level, you choose one of the cleric class’s divine domains. You add that domain’s spells for 1st-level clerics to your known spells. These spells do not count against the number of spells you can know, and they are considered to be sorcerer spells for you. When you reach 3rd, 5th, 7th, and 9th levels in the sorcerer class, you likewise learn your domain’s spells that become available at those levels.</p>
 		</description>
@@ -477,10 +616,7 @@
 			<select type="Archetype Feature" name="Divine Domain (Favored Soul)" supports="Favored Soul Divine Domain" />
 		</rules>
 	</element>
-
-	<!-- Favored Soul Divine Domain elements-->
-
-	<element name="Bonus Proficiencies" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_BONUS_PROFICIENCIES">
+	<element name="Bonus Proficiencies" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_BONUS_PROFICIENCIES">
 		<description>
 			<p>At 1st level, you gain proficiency in light armor, medium armor, shields, and simple weapons.</p>
 		</description>
@@ -494,7 +630,7 @@
 			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" />
 		</rules>
 	</element>
-	<element name="Extra Attack" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_EXTRA_ATTACK">
+	<element name="Extra Attack" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_EXTRA_ATTACK">
 		<description>
 			<p>Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.</p>
 		</description>
@@ -505,7 +641,7 @@
 			<stat name="extra attack:count" value="2" bonus="extra attack" />
 		</rules>
 	</element>
-	<element name="Divine Wings" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_DIVINE_WINGS">
+	<element name="Divine Wings" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_DIVINE_WINGS">
 		<description>
 			<p>At 14th level, you gain the ability to sprout a pair of wings from your back (feathered or bat-like, your choice), gaining a flying speed equal to your current walking speed. You can create these wings as a bonus action on your turn. They last until you dismiss them as a bonus action on your turn.</p>
 			<p class="indent">You can’t manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them.</p>
@@ -514,7 +650,7 @@
 			<description>You can sprout a pair of wings from your back (feathered or bat-like, your choice), gaining a flying speed equal to your current walking speed. They last until you dismiss them as a bonus action on your turn. You can’t manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them.</description>
 		</sheet>
 	</element>
-	<element name="Power of the Chosen" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_ARCHETYPE_FEATURE_FAVORED_SOUL_POWER_OF_THE_CHOSEN">
+	<element name="Power of the Chosen" type="Archetype Feature" source="Unearthed Arcana: Modifying Classes" id="ID_WOTC_UA20150406_SORCERER_ARCHETYPE_FAVORED_SOUL_POWER_OF_THE_CHOSEN">
 		<description>
 			<p>Starting at 18th level, when you cast one of the spells you learned from your Chosen of the Gods class feature, you regain hit points equal to your Charisma modifier (minimum +1) + the spell’s level.</p>
 			<p class="indent">Once you use this feature, you can’t use it again until you finish a long rest.</p>
@@ -527,4 +663,6 @@
 			<stat name="power of the chosen" value="charisma:modifier" bonus="base" />
 		</rules>
 	</element>
+
+	<!-- Favored Soul Divine Domain elements-->
 </elements>
