@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <!--
 	<info>
 		<name>Unearthed Arcana: Modifying Classes</name>
 		<description>Sometimes a campaign will have special needs for archetypes or character options not found in the existing official material. If you’re in this situation, you might want to modify one or more of the classes in the game in order to provide options for players looking for a unique twist on their characters’ abilities. However, modifying a class is not something that should be undertaken lightly, and the job requires some serious effort, playtesting, and revision to get it right. The two best ways to modify a class are to swap out some class features for different ones, and to add new to an existing class. This article presents methods that will help you to use existing mechanics as a model, while drawing upon features of other classes for inspiration.</description>
@@ -8,6 +9,7 @@
 			<file name="20150406.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/unearthed-arcana/2015/20150406.xml" />
 		</update>
 	</info>
+     -->
 	
 	<element name="Unearthed Arcana: Modifying Classes" type="Source" source="Core" id="ID_WOTC_SOURCE_UNEARTHED_ARCANA_20150406">
 		<description>
@@ -1096,7 +1098,7 @@
 		</rules>
 	</element>
 
-	<element name="Blood Domain" type="Archetype Feature" source="Tal’Dorei Campaign Setting" id="ID_WOTC_UA20150406_TDCS_ARCHETYPE_FAVORED_SOUL_BLOOD_DOMAIN">
+	<element name="Blood Domain" type="Archetype Feature" source="Critical Role: Tal’Dorei Campaign Setting" id="ID_WOTC_UA20150406_TDCS_ARCHETYPE_FAVORED_SOUL_BLOOD_DOMAIN">
 		<supports>Favored Soul Divine Domain</supports>
 		<description>
 			<p>Originally developed in Wildemount by the Claret Orders, the Blood domain centers around the understanding of the natural life force within one’s own physical body. The power of blood is the power of sacrifice, the balance of life and death, and the spirit’s anchor within the mortal shell. The Gods of Blood seek to tap into the connection between body and soul through divine means, exploit the hidden reserves of will within one’s own vitality, and even manipulate or corrupt the body of others through these secret rites of crimson. Almost any neutral or evil deity can claim some influence over the secrets of blood magic and this domain, while the gods who watch from more moral realms shun its use beyond extenuating circumstance.</p>
