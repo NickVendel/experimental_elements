@@ -5,7 +5,7 @@
         <description>The Ranger Class with ability to choose every feature.</description>
         <author url="https://www.reddit.com/user/Nick_Vendel/">Nick Vendel</author>
         <update version="0.0.1">
-            <file name="class-ranger.xml" url="https://raw.githubusercontent.com/NickVendel/experemental_elements/master/third-party/critical-role/classes/ranger-constructor.xml" />
+            <file name="class-ranger.xml" url="https://raw.githubusercontent.com/NickVendel/experemental_elements/master/miscellaneous/ranger-constructor.xml" />
         </update>
     </info>
     <!-- Ranger -->
