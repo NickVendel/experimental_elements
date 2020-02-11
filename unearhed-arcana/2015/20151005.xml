@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <!--
 	<info>
 		<name>Unearthed Arcana: Prestige Classes and Rune Magic</name>
 		<description>Many of the character concepts that were once prestige classes or paragon paths in earlier editions of D&amp;D are now options available to 1st-level characters. As such, prestige classes build on the game’s broad range of basic options to represent specialized options and unique training. The first of those specialized options for fifth edition D&amp;D is the rune scribe — a character who masters ancient sigils that embody the fundamental magic of creation.</description>
@@ -8,6 +9,7 @@
 			<file name="20151005.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/unearthed-arcana/2015/20151005.xml" />
 		</update>
 	</info>
+    -->
 
 	<element name="Unearthed Arcana: Prestige Classes and Rune Magic" type="Source" source="Core" id="ID_WOTC_SOURCE_UNEARTHED_ARCANA_20151005">
 		<description>

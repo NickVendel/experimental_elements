@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <!--
 	<info>
 		<name>Unearthed Arcana: Revised Ranger</name>
 		<description>Over the past year, you’ve seen us try a number of new approaches to the ranger, all aimed at addressing the class’s high levels of player dissatisfaction and its ranking as D&amp;D’s weakest class by a significant margin.</description>
@@ -8,6 +9,7 @@
 			<file name="20160912.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/unearthed-arcana/2016/20160912.xml" />
 		</update>
 	</info>
+    -->
 
 	<element name="Unearthed Arcana: Revised Ranger" type="Source" source="Core" id="ID_WOTC_SOURCE_UNEARTHED_ARCANA_20160912">
 		<description>
