@@ -55,7 +55,7 @@
 			<div element="ID_DMSG_MMGS_TRICK_SHOT_VIOLENT_SHOT" />
 			<div element="ID_DMSG_MMGS_RULE_AMMUNITION" />
 		</description>
-		<sheet>
+		<sheet display="false">
 			<description>This archetype focuses on the ability to design, craft, and utilize powerful, yet dangerous ranged weapons.</description>
 		</sheet>
 		<rules>
@@ -94,15 +94,14 @@
 			<p>When you choose this archetype at 3rd level, you learn to perform powerful trick shots to disable or damage your opponents using your firearms</p>
 			<p class="indent"><b><em>Trick Shots.</em></b> You learn two trick shots of your choice, which are detailed under "Trick Shots" below. Many maneuvers enhance an attack in some way. Each use of a trick shot must be declared before the attack roll is made. You can use only one trick shot per attack.</p>
 			<p class="indent">You learn an additional trick shot of your choice at 7th, 10th, 15th and 18th level. Each time you learn a new trick shot, you can also replace one trick shot you know with a different one.</p>
-			<p class="indent"><b><em>Grit.</em></b> You gain a number of grit points equal to your Wisdom modifier (minimum of 1). You regain 1 expended grit point each time you roll 20 on the d20 roll for an attack with a firearm, or deal a killing blow with a firearm to a creature of significant threat (DM's discretion). You regain all expended grit points after short or long rest.</p>
+			<p class="indent"><b><em>Grit.</em></b> You gain a number of grit points equal to your Wisdom modifier (minimum of 1). You regain 1 expended grit point each time you roll 20 on the d20 roll for an attack with a firearm, or deal a killing blow with a firearm to a creature of significant threat (DM's discretion). You regain all expended grit points after a short or long rest.</p>
 			<p class="indent"><b><em>Saving Throws.</em></b> Some of your trick shots require your target to make a saving throw to resist the trick shot's effect. The saving throw DC is calculated as follows:</p>
 			<p class="indent">
 				<b>Trick Shot save DC = 8</b> + your proficiency bonus + your Dexterity modifier
 			</p>
 		</description>
 		<sheet>
-			<description>You have {{grit-points}} Grit points. You regain 1 when you score or a critical hit, when you kill a significant threat, or after finishing a short or long rest.
-			You can also use any of your attacks to perform a Trick Shot, your DC for these attacks is {{trick-shot:dc}}:</description>
+			<description>You have {{grit-points}} Grit points. You regain 1 on a roll of 20 on a d20 attack roll with a firearm, or when you kill a significant threat. You regain all Grit points after finishing a short or long rest. You can use any of your attacks to perform a Trick Shot, your DC for these attacks is {{trick-shot:dc}}:</description>
 		</sheet>
 		<rules>
 			<stat name="grit-points" value="1" bonus="base" />
@@ -110,11 +109,11 @@
 			<stat name="trick-shot:dc" value="8" />
 			<stat name="trick-shot:dc" value="proficiency" />
 			<stat name="trick-shot:dc" value="dexterity:modifier" />
-			<select type="Archetype Feature" name="Trick Shot" number="2" supports="Trick Shot" />
-			<select type="Archetype Feature" name="Trick Shot" supports="Trick Shot" level="7" />
-			<select type="Archetype Feature" name="Trick Shot" supports="Trick Shot" level="10" />
-			<select type="Archetype Feature" name="Trick Shot" supports="Trick Shot" level="15" />
-			<select type="Archetype Feature" name="Trick Shot" supports="Trick Shot" level="18" />
+			<select type="Archetype Feature" name="Trick Shot (Level 3)" number="2" supports="Trick Shot" />
+			<select type="Archetype Feature" name="Trick Shot (Level 7)" supports="Trick Shot" level="7" />
+			<select type="Archetype Feature" name="Trick Shot (Level 10)" supports="Trick Shot" level="10" />
+			<select type="Archetype Feature" name="Trick Shot (Level 15)" supports="Trick Shot" level="15" />
+			<select type="Archetype Feature" name="Trick Shot (Level 18)" supports="Trick Shot" level="18" />
 		</rules>
 	</element>
 	<!-- TRICK SHOTS -->
@@ -222,7 +221,7 @@
 	</element>
 	<element name="Vicious Intent" type="Archetype Feature" source="Gunslinger (2020)" id="ID_DMSG_MMGS_ARCHETYPE_FEATURE_GUNSLINGER_VICIOUS_INTENT">
 		<description>
-			<p>At 18th level, your firearm attacks score a critical hit on a roll of 19-20, and you regain a grit point on a roll of 19 or 20 on a d20 attack roll with firearm.</p>
+			<p>At 18th level, your firearm attacks score a critical hit on a roll of 19-20, and you regain a grit point on a roll of 19 or 20 on a d20 attack roll with a firearm.</p>
 		</description>
 		<sheet>
 			<description>Firearm attacks score a critical hit on 19-20, on which you regain a grit point.</description>
