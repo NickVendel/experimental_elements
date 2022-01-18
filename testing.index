@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <index>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="testing.index" url="https://raw.githubusercontent.com/NickVendel/experimental_elements/master/testing.index" />
 		</update>
 	</info>
 	<files>
-		<file name="20150406.xml" url="https://raw.githubusercontent.com/NickVendel/experimental_elements/master/unearhed-arcana/2015/20151005.xml" />
+		<file name="20150406.xml" url="https://raw.githubusercontent.com/NickVendel/experimental_elements/master/unearhed-arcana/2015/20150406.xml" />
 		<file name="20151005.xml" url="https://raw.githubusercontent.com/NickVendel/experimental_elements/master/unearhed-arcana/2015/20151005.xml" />
 	</files>
 </index>
