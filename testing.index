@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <index>
 	<info>
-		<update version="0.0.3">
+		<update version="0.0.4">
 			<file name="testing.index" url="https://raw.githubusercontent.com/NickVendel/experimental_elements/master/testing.index" />
 		</update>
 	</info>
 	<files>
-		<file name="items-magic.xml" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/supplements/strixhaven-a-curriculum-of-chaos/spells.xml" />
+		<obsolete name="items-magic.xml" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/supplements/strixhaven-a-curriculum-of-chaos/spells.xml" />
+
+		<file name="items-magic.xml" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/supplements/strixhaven-a-curriculum-of-chaos/items-magic.xml" />
 		<file name="spells.xml" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/supplements/strixhaven-a-curriculum-of-chaos/spells.xml" />
 	</files>
 </index>
